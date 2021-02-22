@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id "application"
 }
 
 group 'org.example'
@@ -15,4 +16,13 @@ dependencies {
     compile 'io.prometheus:simpleclient_pushgateway:0.10.0'
     compile 'io.prometheus:simpleclient_httpserver:0.10.0'
     compile 'io.prometheus:simpleclient:0.10.0'
+}
+
+apply plugin : "java"
+ext {
+    javaMainClass = "me.noobgam.Main"
+}
+
+application {
+    mainClassName = javaMainClass
 }
